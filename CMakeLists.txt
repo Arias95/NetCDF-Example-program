@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.6)
+set (CMAKE_CXX_STANDARD 11)
+project(netcdftest)
+link_directories(/usr/local/lib)
+add_executable(netcdftest main.cpp ./src/read.cpp ./src/write.cpp)
+target_link_libraries(netcdftest netcdf netcdf_c++4)
